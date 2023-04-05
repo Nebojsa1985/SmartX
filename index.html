@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartX</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- script za stampanje pdf -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div id="main" class="main">
+        <div class="bubble bubble-bottom-left">
+          <p class="bubble-p">
+            Hi!<br /><br />
+            Ask me anything. I can tell something about everything...<br />
+            Also you can edit, color and print all that later <br />
+            📥 💾 📜 📚 📨 📫 💵
+          </p>
+        </div>
+        <div>
+          <img class="smart-man" src="./smartman.png" alt="smartman" />
+        </div>
+        <div class="bottom-section">
+          <div class="input-container">
+            <input class="input-question" type="text" />
+          </div>
+        </div>
+        <button class="submit-button" id="submit">Ask me</button>
+        <button class="magazine-pdf-btn">Make PDF Script</button>
+        <a class="scroll-down" href="#magazine-container">⬇️</a>
+      </div>
+
+      <div id="magazine-container" class="magazine-container">
+        <div class="magazine-div"></div>
+        <a class="scroll-up" href="#main">⬆️</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img
+        class="authorlogo"
+        src="authorlogo.png"
+        alt="logo"
+        onclick="window.location.href='https://nebojsajovanovic.netlify.app/';"
+      />
+      <p class="info">©️ Nebojša Jovanović</p>
+
+      <p class="info">✉️ jnesa85@gmail.com</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

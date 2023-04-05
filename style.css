@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d1d11;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  color: aliceblue;
+}
+.magazine-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.magazine-div {
+  padding: 10px 30px;
+  min-height: 600px;
+}
+.authorlogo {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.bubble {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  width: 270px;
+  background: #bfa181;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.bubble-p {
+  max-height: 310px;
+  overflow-y: scroll;
+}
+.bubble-p::-webkit-scrollbar {
+  width: 0.1px;
+  background-color: transparent;
+}
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #bfa181;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #bfa181;
+  border-bottom: 20px solid transparent;
+  left: 182px;
+  bottom: -24px;
+}
+
+.smart-man {
+  width: 100px;
+  margin-top: 10px;
+}
+
+input {
+  border: none;
+  background-color: #684e32;
+  width: 80%;
+  font-size: 15px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  text-transform: capitalize;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 650px;
+}
+
+button {
+  border: solid 0.5px #bfa181;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  color: #bfa181;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.submit-button {
+  cursor: pointer;
+}
+.submit-button:hover {
+  color: gray;
+}
+
+.q-and-a {
+  background-color: rgb(120, 60, 60);
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 4px;
+  border: 2px solid black;
+  color: aliceblue;
+}
+.q-and-a::-webkit-scrollbar {
+  width: 0.1px;
+  background-color: transparent;
+}
+
+.remove-q-a {
+  display: none;
+  color: rgb(189, 13, 13);
+  float: right;
+  cursor: pointer;
+}
+.color-picker-q-a {
+  display: none;
+  width: 6px;
+  height: 6px;
+  float: right;
+  margin: 6px 2px;
+  background: rgb(76, 60, 106);
+  border: 0;
+  cursor: pointer;
+  padding: 5px 6px;
+}
+.back-color-picker-q-a {
+  display: none;
+  width: 6px;
+  height: 6px;
+  float: right;
+  margin: 6px 2px;
+  background: red;
+  border: 0;
+  cursor: pointer;
+  padding: 5px 6px;
+}
+.border-remove-q-a {
+  display: none;
+  color: greenyellow;
+  float: right;
+  cursor: pointer;
+}
+.reset-q-a {
+  display: none;
+  color: rgb(47, 255, 186);
+  float: right;
+  cursor: pointer;
+}
+
+.q-and-a:hover .remove-q-a {
+  display: block;
+}
+.q-and-a:hover .reset-q-a {
+  display: block;
+}
+.q-and-a:hover .color-picker-q-a {
+  display: block;
+}
+.q-and-a:hover .back-color-picker-q-a {
+  display: block;
+}
+.q-and-a:hover .border-remove-q-a {
+  display: block;
+}
+
+.magazine-pdf-btn {
+  cursor: pointer;
+}
+.magazine-pdf-btn:hover {
+  color: gray;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 92vh;
+  width: 30%;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down,
+.scroll-up {
+  color: #bfa181;
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  display: none;
+}
+
+.info {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 0.2px rgb(117, 113, 113);
+  color: #bfa181;
+  font-weight: bold;
+}
+/* mob */
+@media screen and (max-width: 420px) {
+  .main {
+    width: 100%;
+    height: 100vh;
+  }
+  .app-container {
+    flex-direction: column;
+  }
+  .magazine-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .bubble {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .bubble-p {
+    max-height: 162px;
+  }
+  .scroll-down,
+  .scroll-up {
+    display: block;
+  }
+}
+/* tablet */
+@media screen and (max-width: 920px) and (min-width: 421px) {
+  .main {
+    width: 100%;
+    height: 100vh;
+  }
+  .app-container {
+    flex-direction: column;
+  }
+  .magazine-container {
+    width: 100%;
+  }
+  .bubble {
+    font-size: 18px;
+  }
+  .bubble-p {
+    max-height: 310px;
+  }
+}
