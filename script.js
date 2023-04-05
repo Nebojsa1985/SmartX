@@ -1,3 +1,5 @@
+
+const API_KEY = process.env.MY_API_KEY
 const submitButton = document.querySelector("#submit");
 const answerCloudPtag = document.querySelector(".bubble-p");
 const inputElement = document.querySelector(".input-question");
@@ -10,7 +12,7 @@ async function getMessage() {
   const options = {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.MY_API_KEY}`,
+      Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
